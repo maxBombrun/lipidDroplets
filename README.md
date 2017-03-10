@@ -8,16 +8,19 @@ Developped in Python.
 
 ## What it does
 
-Give it a screening in BODIPY and HOESCHT channel, allow the detection of individual lipid droplets and associated nuclei.
-Extract several features such as the size distribution of the individual droplets per cell.
+The program takes a screening in BODIPY and HOESCHT channels as input and provide images of the segmentation of individual lipid droplets and associated nuclei.
+It also extracts several features such as the size distribution of the individual droplets per cell.
 
-The aim is to used to improve Models for High-Content/High-Throughput Microscopy Analysis of Subject-Specific Adipogenesis.
+The aim is to improve models for High-Content/High-Throughput Microscopy Analysis of Subject-Specific Adipogenesis.
 
 
 
 ## Usage
 
 Modify the settings.py file to define the correct path, mostly input data.
+In the main.py, you can chose the modules you want to apply.
+On the first run, apply them sequentially.
+
 This algorithm needs CellProfiler to define the relationship between nuclei and associated lipid droplets, i.e., approximated the cells.
 
 http://cellprofiler.org/releases/
