@@ -13,13 +13,6 @@ import computeZprime
 
 
 
-
-	
-
-
-############################# MAIN #####################################3 
-
-
 settings.init() 
 
 CPPath=settings.pathList[0]
@@ -31,65 +24,34 @@ outputCellProfilerPath=settings.pathList[5]
 
 
 
+nProc = multiprocessing.cpu_count()
 listPlates= [x for x in os.listdir(inputDataPath) if os.path.isdir(inputDataPath+x) and x.startswith('plate')]
-
 
 csv.register_dialect('unixpwd', delimiter=',',quotechar = '"', doublequote = True, skipinitialspace = False,lineterminator = '\n',  quoting = csv.QUOTE_NONE)
 
-
-## Auto
-nProc = multiprocessing.cpu_count()
-# listPlates=listPlates[21:]
-
-## Manual
-# nProc=7
-# listPlates=['plate1', 'plate2', 'plate3', 'plate4', 'plate5', 'plate6', 'plate7', 'plate8', 'plate9', 'plate10', 'plate11']
-
-
-
 print listPlates
 
+## Segmentation of the nuclei and the lipid droplets
+segmentNucAndGFP.segmentFatDroplet(listPlates)
 
-segFlag=False
-CPFlag=False
-measFlag=False
+## Cells approximation based on the previous segmentation
+## and features extraction through CellProfiler
+cellProfilerGetRelation.runCellProfilerRelationship()
 
-clusterFlag=False
-fusionCSVFlag=False
+## Individual lipid droplet measurements
+## Creation of size distribution vectors
+measureGFPSize.measureGFP()
 
-DBFlag=False
-featureFlag= True
-zprimeFlag=True
+## Classification of the cells based on the vectors
+clusterDroplets.getClusterOfDroplets(nbClass=2)
 
+## Creation of CSV output, summarizing the measurements per-cell and per-well
+fusionCSV.getPerImageMeasurements()
 
-if segFlag:
-	segmentNucAndGFP.segmentFatDroplet(listPlates)		
+## Plotting of the features
+plotFeatures.plotFeat()
 
-if CPFlag:
-	cellProfilerGetRelation.runCellProfilerRelationship()
-
-if measFlag:
-	measureGFPSize.measureGFP()
-
-if clusterFlag:
-	clusterDroplets.getClusterOfDroplets(nbClass=2)
-
-if fusionCSVFlag:
-	fusionCSV.getPerImageMeasurements()
-
-if featureFlag:
-	plotFeatures.plotFeat()
-
-if zprimeFlag:
-	computeZprime.getZprime()
-
-
-
-print "Done"
-
-
-############ END MAIN #################
-
-
+## Validation of the features through the computation of the Zprime factor
+computeZprime.getZprime()
 
 
