@@ -9,7 +9,7 @@ Developped in Python.
 
 ## What it does
 
-The program takes a screening in BODIPY and HOESCHT channels as input and provide images of the segmentation of individual lipid droplets and associated nuclei.
+The program takes a screening in BODIPY and HOESCHT channels as input and provides images of the segmentation of individual lipid droplets and associated nuclei.
 It also extracts several features such as the size distribution of the individual droplets per cell.
 
 The aim is to improve models for High-Content/High-Throughput Microscopy Analysis of Subject-Specific Adipogenesis.
