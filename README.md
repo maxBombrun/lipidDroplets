@@ -1,17 +1,17 @@
 # lipidDroplets
 
-> Detect individual lipid droplets, usually clustered tightly
+Detect individual lipid droplets, usually clustered tightly.
 
 
-Works with screening from BODIPY and HOESCHT channel
-Developped in Python
+Works with screening from BODIPY and HOESCHT channel.
+Developped in Python.
 
 ## What it does
 
 Give it a screening in BODIPY and HOESCHT channel, allow the detection of individual lipid droplets and associated nuclei.
 Extract several features such as the size distribution of the individual droplets per cell.
 
-The aim is to used to improve Models for High-Content/High-Throughput Microscopy Analysis of Subject-Specific Adipogenesis 
+The aim is to used to improve Models for High-Content/High-Throughput Microscopy Analysis of Subject-Specific Adipogenesis.
 
 
 
