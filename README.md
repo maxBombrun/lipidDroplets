@@ -2,9 +2,6 @@
 
 Detect individual lipid droplets, usually clustered tightly.
 
-
-Works with screening from BODIPY and HOESCHT channel.
-
 Developped in Python.
 
 ## What it does
