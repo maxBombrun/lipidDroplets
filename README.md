@@ -30,7 +30,7 @@ http://cellprofiler.org/releases/
 
 ## Credits
 
-This project was funded by Science for Life Laboratory, the Swedish research council (grant 2012-4968 to Carolina Wählby and K2012-55X-010334-46-5-to Peter Arner), the Swedish strategic research program eSSENCE (to Carolina Wählby) and CIMED (to Peter Arner).
+This project was funded by Science for Life Laboratory, the Swedish research council (grant 2012-4968 to Carolina Wählby and K2012-55X-010334-46-5 to Peter Arner), the Swedish strategic research program eSSENCE (to Carolina Wählby) and CIMED (to Peter Arner).
 
 ## License 
 
