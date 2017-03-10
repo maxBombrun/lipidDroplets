@@ -1,6 +1,6 @@
 # lipidDroplets
 
-Detect individual lipid droplets, usually clustered tightly.
+Detects individual lipid droplets, usually clustered tightly.
 
 Developped in Python.
 
@@ -19,6 +19,7 @@ Modify the settings.py file to define the correct path, mostly input data.
 
 In the main.py, you can chose the modules you want to apply.
 On the first run, apply them sequentially.
+~$ python main.py
 
 This algorithm needs CellProfiler to define the relationship between nuclei and associated lipid droplets, i.e., approximated the cells.
 
