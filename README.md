@@ -4,6 +4,7 @@ Detect individual lipid droplets, usually clustered tightly.
 
 
 Works with screening from BODIPY and HOESCHT channel.
+
 Developped in Python.
 
 ## What it does
@@ -19,6 +20,7 @@ The aim is to improve models for High-Content/High-Throughput Microscopy Analysi
 
 Modify the settings.py file to define the correct path, mostly input data.
 In the main.py, you can chose the modules you want to apply.
+
 On the first run, apply them sequentially.
 
 This algorithm needs CellProfiler to define the relationship between nuclei and associated lipid droplets, i.e., approximated the cells.
