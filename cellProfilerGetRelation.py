@@ -82,6 +82,8 @@ def runCellProfilerRelationship():
 	global Ferr
 	global Fout
 
+	if not os.path.exists('./../logFiles/'):
+		os.makedirs('./../logFiles/')
 	Ferr=open('./../logFiles/Ferr.txt','w')
 	Fout=open('./../logFiles/Fout.txt','w')
 
