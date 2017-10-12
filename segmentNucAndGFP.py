@@ -165,9 +165,9 @@ def norm255(ImgIn):
 ##		  diamVal: Typical diameter for the filtering
 ## Output: Processed image
 def TopHatBasic(f, diamVal):       
-	nL=diamVal
-	nW=diamVal
-	nM=round(nW/7)
+	nL=int(diamVal)
+	nW=int(diamVal)
+	nM=int(round(nW/7))
 
 	Bb = np.ones((nL,nL))
 	dB= np.ones((nW,nW))
