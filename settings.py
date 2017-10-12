@@ -15,6 +15,9 @@ def init():
 	CPPath= "D:/Logiciel/CellProfiler2.2/CellProfiler.exe"
 	inputDataPath= "C:/Data/Granulometry/Data/"
 
+	if inputDataPath[-1] != '/' :
+		inputDataPath=inputDataPath+'/';
+
 	resultPath= "./../Results/"
 	colorDisplayPath =resultPath +"colorDisplay/"
 	outputDetPath = resultPath + "outputResults/"
