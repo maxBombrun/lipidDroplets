@@ -235,8 +235,8 @@ def getClusterOfDroplets(nbClass):
 			writer.writerow(content) 						
 
 	## Export positions of the centroid for the classes
-	with open(outputDetPath+ "/cluster_Center.csv",'wb') as mainFile:
-		writer= csv.writer(mainFile, dialect='unixpwd')	
-		for content in savecentrK:
-			for subContent in content:
-				writer.writerow(subContent) 			
+	# with open(outputDetPath+ "/cluster_Center.csv",'wb') as mainFile:
+	# 	writer= csv.writer(mainFile, dialect='unixpwd')	
+	# 	for content in savecentrK:
+	# 		for subContent in content:
+	# 			writer.writerow(subContent) 			

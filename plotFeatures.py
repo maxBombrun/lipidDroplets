@@ -160,7 +160,7 @@ def plotDoubleBarStats(list2plotPos, list2plotNeg, color2plot, label2plot, legen
 		data_x.append(rect.get_x() + rect.get_width()/2)
 
 	markPos= [max(item) for item in list2plotNeg]
-	data_y = [markPos[0], markPos[1],markPos[2]]
+	data_y = [item for item in markPos]
 	print ('maxNeg:')
 	print data_y
 	if topLimit< max(data_y):
@@ -168,7 +168,7 @@ def plotDoubleBarStats(list2plotPos, list2plotNeg, color2plot, label2plot, legen
 	ax.plot(data_x, data_y, linestyle=' ', color='darkgray', marker='o', markersize=40)
 
 	markPos= [min(item) for item in list2plotNeg]
-	data_y = [markPos[0], markPos[1],markPos[2]]
+	data_y = [item for item in markPos]
 	print ('minNeg:')
 	print data_y
 	if botLimit> min(data_y):
@@ -179,7 +179,7 @@ def plotDoubleBarStats(list2plotPos, list2plotNeg, color2plot, label2plot, legen
 	for rect in rects2:
 		data_x.append(rect.get_x() + rect.get_width()/2)
 	markPos= [max(item) for item in list2plotPos]
-	data_y = [markPos[0], markPos[1],markPos[2]]
+	data_y = [item for item in markPos]
 	print ('maxPos:')
 	print data_y
 	if topLimit< max(data_y):
@@ -187,7 +187,7 @@ def plotDoubleBarStats(list2plotPos, list2plotNeg, color2plot, label2plot, legen
 	ax.plot(data_x, data_y, linestyle=' ', color='lightskyblue', marker='o', markersize=40)
 
 	markPos= [min(item) for item in list2plotPos]
-	data_y = [markPos[0], markPos[1],markPos[2]]
+	data_y = [item for item in markPos]
 	print ('minPos:')
 	print data_y
 	if botLimit> min(data_y):
